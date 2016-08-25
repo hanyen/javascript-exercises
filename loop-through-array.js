@@ -1,10 +1,10 @@
 /*jshint multistr:true */
 
-/*
+/*Perfect! You've now got the engine of your search program running. It will:
+
 1. Loop through the array,
 2. Compare each letter to the first letter of your name, and if it sees that letter:
-3. It will push that letter and all the letters that follow it to an array, stopping when the number of letters it pushes are equal to the number of letters in your name. 
-*/
+3. It will push that letter and all the letters that follow it to an array, stopping when the number of letters it pushes are equal to the number of letters in your name. */
 
 var text = "Hey, how are you \
 doing? My name is Emily.";
@@ -29,4 +29,12 @@ for (var i=0; i < text.length; i++)
         
         
     }
+}
+
+if (hits[0] == null)
+{
+    console.log("Your name wasn't found");
+} else
+{
+    console.log(hits);   
 }
