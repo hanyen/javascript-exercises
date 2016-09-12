@@ -16,7 +16,8 @@ function power(base,exponent) {
 		exponent = 2;
 	}
 	var result = 1;
-	for(var i = 0; i<exponent;i++) {
+	//use "count" instead of i so that I don't include it in result calculation. It's only a counter.
+	for(var count = 0; count<exponent;count++) {
 		result *=base;
 	}
 	return result;
