@@ -1,10 +1,8 @@
 /* Dog Walker pt 1
 
 Instructions from your teacher:
-You are running a part-time dog-walking business. 
-
-You work from Monday to Thursday, from 9am to 3pm. Each walking slot starts on the hour, and is an hour long. You only walk 1 dog per slot.
-
+You are running a part-time dog-walking business. You work from Monday to Thursday, from 9am to 3pm. 
+Each walking slot starts on the hour, and is an hour long. You only walk 1 dog per slot.
 Write a program that prints out your schedule in a tidy tabular format:
 
       Mon     Tue     Wed     Thu
@@ -14,27 +12,25 @@ Write a program that prints out your schedule in a tidy tabular format:
 12pm                  Spike
 1pm
 2pm   LadyKiller
-
 */
 
-//[done] Dog Data (object)
-  //name
-  //day
-  //time
+	//Dog Data (object)
+		//name
+		//day
+		//time
 
-//Dog Walking Behaviors (functions that operate on players' objects)
-  //make a dog
-  //display dog info
-  //update a dog info
+	//Dog Walking Behaviors (functions that operate on players' objects)
+		//make a dog
+		//display dog info
+		//update a dog info
 
-//[done] Team (array of player's object)
-  //several dogs 
+	//Team (array of player's object)
+		//several dogs 
 
-//Team Behaviors (functions that operate on team array)
-  //display all dog walking schedules
-  //add a dog walking
-  //remove a dog walking
-
+	//Team Behaviors (functions that operate on team array)
+		//display all dog walking schedules
+		//add a dog walking
+		//remove a dog walking
 
 //create dog objects with day and time as the properties
 function createDog(name,day,time) {
@@ -65,7 +61,8 @@ function printSchedule() {
   for (var i=0; i<availableSlots.day.length; i++) {
     heading = heading + "\t" + availableSlots.day[i];
   } console.log (heading);
-
+	
+	//print dog names on the correct day and time slot
   var times = "";
   for (var i=0; i<availableSlots.time.length; i++) {
     times = times + availableSlots.time[i] + "\t" + findDogs(availableSlots.time[i]) + "\n";
