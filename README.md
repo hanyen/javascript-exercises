@@ -1,2 +1,2 @@
 # javascript-exercises
-Exercises for makersquare technical interview
+Exercises for hack reactor technical interview
