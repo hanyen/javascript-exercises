@@ -1,0 +1,32 @@
+var fn = function(one, two) {
+  console.log(this, one, two);
+  return this;
+}
+
+//fn(1,2); // window object, 1, 2
+
+var a = {
+  key: 'value-a'
+};
+var b = {
+  key: 'value-b'
+};
+var c = {
+  key: 'value-c'
+};
+
+a.method = fn;
+
+var d = a.method(b, c);
+
+// var e = fn.call(a, b, c);
+
+// setTimeout(fn, 2000);
+
+// setTimeout(function() {
+//   a.method(b, c);
+// }, 4000)
+
+setTimeout(fn, 2000);
+
+new a.method(b, c);
